@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1774896545745",
+    "firstName": "Soumya",
+    "lastName": "Biswajit",
+    "email": "soumyanayak441@gmail.com",
+    "phone": "6370926354",
+    "country": "India",
+    "password": "$2b$10$7mZLF.xwq0LP921ovlpVQ.hCJMF./GqIBaPeaRW03IiosLmGlrnHi",
+    "role": "user",
+    "createdAt": "2026-03-30T18:49:05.746Z"
+  },
+  {
+    "id": "1",
+    "firstName": "Admin",
+    "lastName": "User",
+    "email": "admin@shop.com",
+    "phone": "6370932078",
+    "country": "India",
+    "password": "$2b$10$nNVG9wgOfnmjNo1CblIF0e2pLFyd03V/321pvXfoUvNE6XkN3ACC6",
+    "role": "admin",
+    "createdAt": "2026-03-30T18:49:05.746Z"
+  },
+  {
+    "id": "1775055599938",
+    "firstName": "Rocky",
+    "lastName": "Nayak",
+    "email": "soumyanayak446@gmail.com",
+    "phone": "8895908748",
+    "country": "India",
+    "password": "$2b$10$UYGm2u3TScgocY6PB5tWU.pq2jcyakfp3SIkV7WlqPRzPTGBTmcL6",
+    "createdAt": "2026-04-01T14:59:59.938Z"
+  }
+]

@@ -1,0 +1,454 @@
+[
+  {
+    "id": "1774894494845",
+    "userId": "guest-1774894494845",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 1
+      },
+      {
+        "productId": 11
+      },
+      {
+        "productId": 10
+      }
+    ],
+    "total": 69,
+    "paymentMethod": "razorpay",
+    "paymentStatus": "PROCESSING",
+    "createdAt": "2026-03-30T18:14:54.845Z"
+  },
+  {
+    "id": "1774894500945",
+    "userId": "guest-1774894500945",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 1
+      },
+      {
+        "productId": 11
+      },
+      {
+        "productId": 10
+      }
+    ],
+    "total": 69,
+    "paymentMethod": "razorpay",
+    "paymentStatus": "PROCESSING",
+    "createdAt": "2026-03-30T18:15:00.945Z"
+  },
+  {
+    "id": "1774894502933",
+    "userId": "guest-1774894502933",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 1
+      },
+      {
+        "productId": 11
+      },
+      {
+        "productId": 10
+      }
+    ],
+    "total": 69,
+    "paymentMethod": "razorpay",
+    "paymentStatus": "PROCESSING",
+    "createdAt": "2026-03-30T18:15:02.933Z"
+  },
+  {
+    "id": "1774894503533",
+    "userId": "guest-1774894503533",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 1
+      },
+      {
+        "productId": 11
+      },
+      {
+        "productId": 10
+      }
+    ],
+    "total": 69,
+    "paymentMethod": "razorpay",
+    "paymentStatus": "PROCESSING",
+    "createdAt": "2026-03-30T18:15:03.533Z"
+  },
+  {
+    "id": "1774894503751",
+    "userId": "guest-1774894503751",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 1
+      },
+      {
+        "productId": 11
+      },
+      {
+        "productId": 10
+      }
+    ],
+    "total": 69,
+    "paymentMethod": "razorpay",
+    "paymentStatus": "PROCESSING",
+    "createdAt": "2026-03-30T18:15:03.751Z"
+  },
+  {
+    "id": "1774894870900",
+    "userId": "guest-1774894870900",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 22
+      },
+      {
+        "productId": 23
+      },
+      {
+        "productId": 23
+      }
+    ],
+    "total": 59,
+    "paymentMethod": "razorpay",
+    "paymentStatus": "PROCESSING",
+    "createdAt": "2026-03-30T18:21:10.900Z"
+  },
+  {
+    "id": "1774894990412",
+    "userId": "guest-1774894990412",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 22
+      },
+      {
+        "productId": 23
+      },
+      {
+        "productId": 23
+      }
+    ],
+    "total": 59,
+    "paymentMethod": "cod",
+    "paymentStatus": "PENDING",
+    "shippingAddress": {
+      "flat": "plot -42,Lane 7",
+      "building": "Golden Recidency",
+      "area": "Baruneswar temple road",
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "pin": "751020"
+    },
+    "createdAt": "2026-03-30T18:23:10.412Z"
+  },
+  {
+    "id": "1774896606694",
+    "userId": "guest-1774896606694",
+    "email": "guest@example.com",
+    "items": [
+      {
+        "productId": 23
+      },
+      {
+        "productId": 2
+      }
+    ],
+    "total": 51,
+    "paymentMethod": "cod",
+    "paymentStatus": "PENDING",
+    "shippingAddress": {
+      "flat": "plot -42,Lane 7",
+      "building": "Golden Recidency",
+      "area": "Baruneswar temple road",
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "pin": "751020"
+    },
+    "createdAt": "2026-03-30T18:50:06.694Z"
+  },
+  {
+    "id": "1775025994989",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 3,
+        "quantity": 1
+      },
+      {
+        "productId": 5,
+        "quantity": 1
+      },
+      {
+        "productId": 8,
+        "quantity": 1
+      },
+      {
+        "productId": 4,
+        "quantity": 1
+      }
+    ],
+    "total": 58,
+    "paymentMethod": "cod",
+    "paymentStatus": "PENDING",
+    "shippingAddress": {
+      "flat": "plot -42,Lane 7",
+      "building": "Golden Recidency",
+      "area": "Baruneswar temple road",
+      "city": "Bhubaneswar",
+      "pin": "751020",
+      "state": "Odisha"
+    },
+    "createdAt": "2026-04-01T06:46:34.989Z"
+  },
+  {
+    "id": "1775026469537",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 24,
+        "quantity": 1
+      }
+    ],
+    "total": 13.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "createdAt": "2026-04-01T06:54:29.537Z"
+  },
+  {
+    "id": "1775027913087",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 1
+      }
+    ],
+    "total": 17.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "createdAt": "2026-04-01T07:18:33.087Z"
+  },
+  {
+    "id": "1775029788623",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 3,
+        "quantity": 1
+      }
+    ],
+    "total": 14.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "createdAt": "2026-04-01T07:49:48.623Z"
+  },
+  {
+    "id": "1775030593650",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 2,
+        "quantity": 1
+      }
+    ],
+    "total": 28,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "createdAt": "2026-04-01T08:03:13.650Z"
+  },
+  {
+    "id": "1775033767829",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 3,
+        "quantity": 1
+      }
+    ],
+    "total": 14.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "createdAt": "2026-04-01T08:56:07.829Z"
+  },
+  {
+    "id": "1775034523931",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 2,
+        "quantity": 1
+      }
+    ],
+    "total": 28,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "createdAt": "2026-04-01T09:08:43.931Z"
+  },
+  {
+    "id": "1775039737620",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 3,
+        "productName": "Linen Camp Shirt",
+        "quantity": 1
+      }
+    ],
+    "total": 14.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "status": "Placed",
+    "createdAt": "2026-04-01T10:35:37.620Z"
+  },
+  {
+    "id": "1775040247050",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 1,
+        "productName": "Silk Blouse",
+        "quantity": 1
+      },
+      {
+        "productId": 2,
+        "productName": "Cashmere Sweater",
+        "quantity": 1
+      }
+    ],
+    "total": 44,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "status": "Placed",
+    "createdAt": "2026-04-01T10:44:07.050Z"
+  },
+  {
+    "id": "1775040285331",
+    "userId": "1775025867355",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 5,
+        "productName": "Slim Chinos",
+        "quantity": 1
+      },
+      {
+        "productId": 4,
+        "productName": "Graphic Tee",
+        "quantity": 1
+      },
+      {
+        "productId": 7,
+        "productName": "Pleated Trousers",
+        "quantity": 1
+      },
+      {
+        "productId": 9,
+        "productName": "Leather Sneakers",
+        "quantity": 1
+      }
+    ],
+    "total": 82,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "status": "Placed",
+    "createdAt": "2026-04-01T10:44:45.331Z"
+  },
+  {
+    "id": "1775045709785",
+    "userId": "1774896545745",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 3,
+        "productName": "Linen Camp Shirt",
+        "quantity": 1
+      }
+    ],
+    "total": 14.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "status": "Placed",
+    "createdAt": "2026-04-01T12:15:09.785Z"
+  },
+  {
+    "id": "1775050659073",
+    "userId": "1774896545745",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 5,
+        "productName": "Slim Chinos",
+        "quantity": 1
+      }
+    ],
+    "total": 19.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "status": "Placed",
+    "createdAt": "2026-04-01T13:37:39.073Z"
+  },
+  {
+    "id": "1775050818661",
+    "userId": "1774896545745",
+    "email": "soumyanayak441@gmail.com",
+    "items": [
+      {
+        "productId": 5,
+        "productName": "Slim Chinos",
+        "quantity": 1
+      }
+    ],
+    "total": 19.5,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "status": "Shipped",
+    "createdAt": "2026-04-01T13:40:18.661Z",
+    "updatedAt": "2026-04-01T14:58:07.214Z"
+  },
+  {
+    "id": "1775055178074",
+    "userId": "1",
+    "email": "admin@shop.com",
+    "items": [
+      {
+        "productId": 2,
+        "productName": "Cashmere Sweater",
+        "quantity": 1
+      }
+    ],
+    "total": 28,
+    "paymentMethod": "upi",
+    "paymentStatus": "PAID",
+    "shippingAddress": null,
+    "status": "Shipped",
+    "createdAt": "2026-04-01T14:52:58.074Z",
+    "updatedAt": "2026-04-01T14:56:34.087Z"
+  }
+]
