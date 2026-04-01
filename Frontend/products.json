@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Silk Blouse",
+    "price": 16,
+    "category": "tops",
+    "color": "white",
+    "season": "spring",
+    "image": "https://m.media-amazon.com/images/I/71VFs2XrDVL._AC_UY350_.jpg",
+    "description": "Elegant silk blouse with pearl buttons and a relaxed fit perfect for layering."
+  },
+  {
+    "id": 2,
+    "name": "Cashmere Sweater",
+    "price": 28,
+    "category": "tops",
+    "color": "beige",
+    "season": "winter",
+    "image": "https://static.aceomni.cmsaceturtle.com/prod/product-image/aceomni/Wrangler/Monobrand/WMJK005313/WMJK005313_1.jpg",
+    "description": "Ultra-soft cashmere crew neck sweater for ultimate warmth and luxury."
+  },
+  {
+    "id": 3,
+    "name": "Linen Camp Shirt",
+    "price": 13,
+    "category": "tops",
+    "color": "blue",
+    "season": "summer",
+    "image": "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/DECEMBER/29/whOIuYJh_53cefe3ad52f4621929279281260e4b5.jpg",
+    "description": "Breathable linen camp collar shirt with a relaxed summer silhouette."
+  },
+  {
+    "id": 4,
+    "name": "Graphic Tee",
+    "price": 12,
+    "category": "tops",
+    "color": "black",
+    "season": "all-season",
+    "image": "https://m.media-amazon.com/images/I/81auLqNjbSL._AC_UY1100_.jpg",
+    "description": "Premium heavyweight cotton tee with abstract geometric print."
+  },
+  {
+    "id": 5,
+    "name": "Slim Chinos",
+    "price": 18,
+    "category": "bottoms",
+    "color": "beige",
+    "season": "spring",
+    "image": "https://m.media-amazon.com/images/I/71Y7lPLUXkL._AC_UY1100_.jpg",
+    "description": "Tailored slim-fit chino trousers with a modern tapered leg."
+  },
+  {
+    "id": 6,
+    "name": "Selvedge Denim",
+    "price": 22,
+    "category": "bottoms",
+    "color": "blue",
+    "season": "all-season",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2024/12/469933097/YK/BI/XC/37190943/men-track-pants-500x500.jpg",
+    "description": "Japanese selvedge denim jeans with a classic straight-leg fit."
+  },
+  {
+    "id": 7,
+    "name": "Pleated Trousers",
+    "price": 21,
+    "category": "bottoms",
+    "color": "black",
+    "season": "fall",
+    "image": "https://wearmarts.com/public/uploads/all/QidctaSCny0LdBO5abjoXTmxOzWbeuNcoUaSFtak.png",
+    "description": "High-waisted pleated wool-blend trousers with a sophisticated drape."
+  },
+  {
+    "id": 8,
+    "name": "Cargo Pants",
+    "price": 15,
+    "category": "bottoms",
+    "color": "green",
+    "season": "all-season",
+    "image": "https://static.cilory.com/771131-thickbox_default/mens-sage-green-acid-washed-bell-bottom-denim-jeans.jpg",
+    "description": "Relaxed-fit cargo pants with multiple utility pockets."
+  },
+  {
+    "id": 9,
+    "name": "Leather Sneakers",
+    "price": 31,
+    "category": "shoes",
+    "color": "white",
+    "season": "all-season",
+    "image": "https://www.campusshoes.com/cdn/shop/files/LEVEL_LEVEL_WHT-L.GRY_07_831c7a2c-ff1b-4011-9268-b11f984219c6.webp?v=1757580207",
+    "description": "Minimalist full-grain leather sneakers with a clean low-top profile."
+  },
+  {
+    "id": 10,
+    "name": "Chelsea Boots",
+    "price": 36,
+    "category": "shoes",
+    "color": "brown",
+    "season": "fall",
+    "image": "https://bugattishoes.in/cdn/shop/files/322-A9S01-6900-4100.jpg?v=1762412735",
+    "description": "Italian suede Chelsea boots with elastic side panels and stacked heel."
+  },
+  {
+    "id": 11,
+    "name": "Canvas Loafers",
+    "price": 17,
+    "category": "shoes",
+    "color": "beige",
+    "season": "summer",
+    "image": "https://m.media-amazon.com/images/I/61iq+p8OrdL._AC_UY1000_.jpg",
+    "description": "Lightweight canvas slip-on loafers with a cushioned insole."
+  },
+  {
+    "id": 12,
+    "name": "Running Shoes",
+    "price": 26,
+    "category": "shoes",
+    "color": "black",
+    "season": "all-season",
+    "image": "https://shop.teamsg.in/cdn/shop/files/22-07-202401188.png?v=1744374583",
+    "description": "Performance running shoes with responsive cushioning and breathable mesh."
+  },
+  {
+    "id": 13,
+    "name": "Wool Overcoat",
+    "price": 35,
+    "category": "outerwear",
+    "color": "black",
+    "season": "winter",
+    "image": "https://m.media-amazon.com/images/I/71VFs2XrDVL._AC_UY350_.jpg",
+    "description": "Tailored double-breasted Italian wool overcoat with satin lining."
+  },
+  {
+    "id": 14,
+    "name": "Bomber Jacket",
+    "price": 34,
+    "category": "outerwear",
+    "color": "green",
+    "season": "fall",
+    "image": "https://static.aceomni.cmsaceturtle.com/prod/product-image/aceomni/Wrangler/Monobrand/WMJK005313/WMJK005313_1.jpg",
+    "description": "Classic nylon bomber jacket with ribbed cuffs and brass zipper."
+  },
+  {
+    "id": 15,
+    "name": "Denim Jacket",
+    "price": 23,
+    "category": "outerwear",
+    "color": "blue",
+    "season": "spring",
+    "image": "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/DECEMBER/29/whOIuYJh_53cefe3ad52f4621929279281260e4b5.jpg",
+    "description": "Vintage-wash trucker denim jacket with copper hardware details."
+  },
+  {
+    "id": 16,
+    "name": "Rain Parka",
+    "price": 33,
+    "category": "outerwear",
+    "color": "black",
+    "season": "spring",
+    "image": "https://m.media-amazon.com/images/I/81auLqNjbSL._AC_UY1100_.jpg",
+    "description": "Waterproof hooded parka with sealed seams and adjustable drawcord."
+  },
+  {
+    "id": 17,
+    "name": "Leather Tote",
+    "price": 33,
+    "category": "bags",
+    "color": "brown",
+    "season": "all-season",
+    "image": "https://m.media-amazon.com/images/I/71Y7lPLUXkL._AC_UY1100_.jpg",
+    "description": "Full-grain vegetable-tanned leather tote with interior laptop sleeve."
+  },
+  {
+    "id": 18,
+    "name": "Canvas Backpack",
+    "price": 20,
+    "category": "bags",
+    "color": "green",
+    "season": "all-season",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2024/12/469933097/YK/BI/XC/37190943/men-track-pants-500x500.jpg",
+    "description": "Waxed canvas backpack with leather straps and brass buckle closures."
+  },
+  {
+    "id": 19,
+    "name": "Crossbody Bag",
+    "price": 14,
+    "category": "bags",
+    "color": "black",
+    "season": "all-season",
+    "image": "https://wearmarts.com/public/uploads/all/QidctaSCny0LdBO5abjoXTmxOzWbeuNcoUaSFtak.png",
+    "description": "Compact nylon crossbody bag with adjustable webbing shoulder strap."
+  },
+  {
+    "id": 20,
+    "name": "Weekend Duffle",
+    "price": 27,
+    "category": "bags",
+    "color": "beige",
+    "season": "all-season",
+    "image": "https://static.cilory.com/771131-thickbox_default/mens-sage-green-acid-washed-bell-bottom-denim-jeans.jpg",
+    "description": "Spacious canvas and leather duffle bag perfect for weekend getaways."
+  },
+  {
+    "id": 21,
+    "name": "Silk Scarf",
+    "price": 11,
+    "category": "accessories",
+    "color": "red",
+    "season": "spring",
+    "image": "https://www.campusshoes.com/cdn/shop/files/LEVEL_LEVEL_WHT-L.GRY_07_831c7a2c-ff1b-4011-9268-b11f984219c6.webp?v=1757580207",
+    "description": "Hand-rolled silk twill scarf with an original abstract watercolor print."
+  },
+  {
+    "id": 22,
+    "name": "Leather Belt",
+    "price": 13,
+    "category": "accessories",
+    "color": "brown",
+    "season": "all-season",
+    "image": "https://bugattishoes.in/cdn/shop/files/322-A9S01-6900-4100.jpg?v=1762412735",
+    "description": "Full-grain English bridle leather belt with solid brass roller buckle."
+  },
+  {
+    "id": 23,
+    "name": "Aviator Sunglasses",
+    "price": 23,
+    "category": "accessories",
+    "color": "black",
+    "season": "summer",
+    "image": "https://m.media-amazon.com/images/I/61iq+p8OrdL._AC_UY1000_.jpg",
+    "description": "Titanium frame aviator sunglasses with polarized CR-39 lenses."
+  },
+  {
+    "id": 24,
+    "name": "Merino Beanie",
+    "price": 12,
+    "category": "accessories",
+    "color": "red",
+    "season": "winter",
+    "image": "https://shop.teamsg.in/cdn/shop/files/22-07-202401188.png?v=1744374583",
+    "description": "Fine-gauge merino wool ribbed beanie with a classic fold-over cuff."
+  }
+]

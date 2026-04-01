@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOPPING WEB — Make Your Shopping Easier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<!-- ===== Toast Container ===== -->
+<div id="toast-container" class="toast-container"></div>
+
+<!-- ===== LOGIN OVERLAY ===== -->
+<div id="login-overlay" class="login-overlay">
+  <div class="login-box">
+
+    <!-- Login Panel -->
+    <div class="login-panel" id="panel-login">
+      <div class="login-logo">
+        <span class="logo-sym">◈</span>
+        <span class="logo-word">SHOPPING WEB</span>
+      </div>
+      <h2 class="login-title">Welcome Back</h2>
+      <p class="login-sub">Sign in to continue shopping</p>
+
+      <form class="login-form" id="form-login">
+        <div class="field-group">
+          <input type="email" placeholder="Email address" id="li-email" required>
+        </div>
+        <div class="field-group pw-group">
+          <input type="password" placeholder="Password" id="li-pass" required>
+          <button type="button" class="pw-toggle" id="pw-toggle-li">👁</button>
+        </div>
+        <button type="submit" class="login-submit-btn">Sign In</button>
+      </form>
+
+      <p class="login-switch">
+        Don't have an account?
+        <button type="button" class="switch-link" id="go-register">Create one</button>
+      </p>
+    </div>
+
+    <!-- Register Panel -->
+    <div class="login-panel" id="panel-register" hidden>
+      <div class="login-logo">
+        <span class="logo-sym">◈</span>
+        <span class="logo-word">SHOPPING WEB</span>
+      </div>
+      <h2 class="login-title">Create Account</h2>
+      <p class="login-sub">Join us and start building your look</p>
+
+      <form class="login-form reg-form" id="form-register">
+        <div class="field-row">
+          <div class="field-group">
+            <input type="text" placeholder="First Name" id="reg-fname" required>
+          </div>
+          <div class="field-group">
+            <input type="text" placeholder="Last Name" id="reg-lname" required>
+          </div>
+        </div>
+        <div class="field-group">
+          <input type="email" placeholder="Gmail Address" id="reg-email" required>
+        </div>
+        <div class="field-group">
+          <input type="tel" placeholder="Phone Number" id="reg-phone" required>
+        </div>
+        <div class="field-group">
+          <select id="reg-country" required>
+            <option value="" disabled selected>Select Country</option>
+            <option>India</option><option>United States</option>
+            <option>United Kingdom</option><option>UAE</option>
+            <option>Canada</option><option>Australia</option>
+            <option>Germany</option><option>France</option>
+            <option>Japan</option><option>Singapore</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field-group pw-group">
+          <input type="password" placeholder="Create Password" id="reg-pass" required>
+          <button type="button" class="pw-toggle" id="pw-toggle-reg">👁</button>
+        </div>
+        <button type="submit" class="login-submit-btn">Sign Up</button>
+      </form>
+
+      <p class="login-switch">
+        Already have an account?
+        <button type="button" class="switch-link" id="go-login">Sign In</button>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Rest of your HTML remains the same... -->
+<!-- ===== Product Card Template ===== -->
+<template id="product-card-template">
+  <article class="product-card" draggable="true">
+    <div class="card-image">
+      <img class="card-img" src="" alt="" loading="lazy">
+      <div class="card-overlay">
+        <button class="qv-btn" type="button">◉ Quick View</button>
+      </div>
+      <span class="card-badge"></span>
+    </div>
+    <div class="card-body">
+      <div class="card-tags">
+        <span class="tag-color">
+          <span class="dot"></span>
+          <span class="dot-label"></span>
+        </span>
+        <span class="tag-season"></span>
+      </div>
+      <h3 class="card-name"></h3>
+      <div class="card-footer">
+        <span class="card-price"></span>
+        <button class="card-add" type="button" title="Add to bundle">+</button>
+      </div>
+    </div>
+  </article>
+</template>
+
+<!-- ===== Quick View Dialog ===== -->
+<dialog id="qv-dialog" class="qv-dialog">
+  <div class="qv-inner">
+    <button class="qv-close" type="button" id="qv-close">✕</button>
+    <div class="qv-image">
+      <img class="qv-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="qv-body">
+      <span class="qv-badge"></span>
+      <h2 class="qv-name"></h2>
+      <p class="qv-desc"></p>
+      <div class="qv-meta">
+        <span class="qv-color"><span class="dot"></span><span></span></span>
+        <span class="qv-season"></span>
+      </div>
+      <div class="qv-footer">
+        <span class="qv-price"></span>
+        <button class="qv-add-btn" type="button" id="qv-add">+ Add to Bundle</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ===== Payment Dialog ===== -->
+<dialog id="pay-dialog" class="pay-dialog">
+  <div class="pay-inner">
+    <button class="qv-close" type="button" id="pay-close">✕</button>
+    <h2 class="pay-title">Complete Your Order</h2>
+    <div class="pay-summary-line" id="pay-summary-line"></div>
+
+    <!-- Payment Method Selection -->
+    <div class="pay-methods" id="pay-methods">
+      <button class="pay-method-btn" id="btn-upi" type="button">
+        <span class="pm-icon">📱</span>
+        <span class="pm-label">UPI Payment</span>
+      </button>
+      <button class="pay-method-btn" id="btn-cod" type="button">
+        <span class="pm-icon">🏠</span>
+        <span class="pm-label">Cash on Delivery</span>
+      </button>
+    </div>
+
+    <!-- UPI QR Code Payment -->
+    <div class="pay-panel" id="panel-upi">
+      <p class="pay-instruction">Scan QR Code with any UPI app to pay</p>
+      <div class="upi-qr-container">
+        <div id="qr-code-container" style="display: flex; align-items: center; justify-content: center; width: 100%; min-height: 250px;"></div>
+        <div class="upi-amount-display">
+          <span class="amount-label">Amount to Pay</span>
+          <span class="amount-value" id="upi-amount">₹0</span>
+        </div>
+      </div>
+      <p class="upi-instruction">Scan this QR code with your UPI app (Google Pay, PhonePe, etc.)</p>
+
+      <div style="background: var(--acc-soft); border: 1px solid var(--acc); border-radius: 12px; padding: 14px; margin: 16px 0; display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" id="upi-payment-done" style="width: 18px; height: 18px; cursor: pointer;">
+        <label for="upi-payment-done" style="flex: 1; cursor: pointer; margin: 0; font-size: 14px; font-weight: 600; color: var(--tx);">
+          ✓ I have completed the payment
+        </label>
+      </div>
+
+      <button type="button" class="pay-confirm-btn" id="upi-confirm-btn" disabled>
+        ✓ Confirm Payment
+      </button>
+
+      <div class="payment-status" id="upi-payment-status">
+        <span class="status-icon">⏳</span>
+        <span class="status-text">Waiting for payment confirmation...</span>
+      </div>
+    </div>
+
+    <!-- COD Payment -->
+    <div class="pay-panel" id="panel-cod">
+      <p class="pay-instruction">Enter your delivery address</p>
+      <form class="cod-form" id="cod-form">
+        <div class="field-row">
+          <div class="field-group">
+            <label>Flat / House No.</label>
+            <input type="text" id="cod-flat" placeholder="e.g. A-204" required>
+          </div>
+          <div class="field-group">
+            <label>Building / Block</label>
+            <input type="text" id="cod-building" placeholder="e.g. Sunrise Apts" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Street / Area</label>
+          <input type="text" id="cod-area" placeholder="e.g. MG Road, Koramangala" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>City</label>
+            <input type="text" id="cod-city" placeholder="e.g. Bengaluru" required>
+          </div>
+          <div class="field-group">
+            <label>PIN Code</label>
+            <input type="text" id="cod-pin" placeholder="e.g. 560034" maxlength="6" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>State</label>
+          <select id="cod-state" required>
+            <option value="" disabled selected>Select State</option>
+            <option>Andhra Pradesh</option><option>Assam</option>
+            <option>Bihar</option><option>Delhi</option>
+            <option>Goa</option><option>Gujarat</option>
+            <option>Haryana</option><option>Himachal Pradesh</option>
+            <option>Jharkhand</option><option>Karnataka</option>
+            <option>Kerala</option><option>Madhya Pradesh</option>
+            <option>Maharashtra</option><option>Odisha</option>
+            <option>Punjab</option><option>Rajasthan</option>
+            <option>Tamil Nadu</option><option>Telangana</option>
+            <option>Uttar Pradesh</option><option>Uttarakhand</option>
+            <option>West Bengal</option><option>Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="pay-confirm-btn">📦 Place Order (COD)</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<!-- ===== Orders Dialog ===== -->
+<dialog id="orders-dialog" class="orders-dialog">
+  <div class="orders-inner">
+    <div class="orders-head">
+      <h2 class="orders-title">My Orders</h2>
+      <button type="button" id="orders-close" class="qv-close">✕</button>
+    </div>
+
+    <div id="orders-loading" class="orders-loading hidden">Loading orders...</div>
+    <div id="orders-empty" class="orders-empty hidden">No orders found.</div>
+    <div id="orders-list" class="orders-list"></div>
+  </div>
+</dialog>
+
+<!-- ===== Profile Dialog ===== -->
+<dialog id="profile-dialog" class="orders-dialog">
+  <div class="orders-inner">
+    <div class="orders-head">
+      <h2 class="orders-title">My Profile</h2>
+      <button type="button" id="profile-close" class="qv-close">✕</button>
+    </div>
+
+    <div class="profile-box">
+      <div class="profile-row"><strong>Name:</strong> <span id="profile-name"></span></div>
+      <div class="profile-row"><strong>Email:</strong> <span id="profile-email"></span></div>
+      <div class="profile-row"><strong>Phone:</strong> <span id="profile-phone"></span></div>
+      <div class="profile-row"><strong>Country:</strong> <span id="profile-country"></span></div>
+    </div>
+  </div>
+</dialog>
+
+
+<!-- ===== Admin Dialog ===== -->
+<dialog id="admin-dialog" class="orders-dialog">
+  <div class="orders-inner">
+    <div class="orders-head">
+      <h2 class="orders-title">Admin Panel</h2>
+      <button type="button" id="admin-close" class="qv-close">✕</button>
+    </div>
+
+    <div class="admin-section">
+      <h3>Add Product</h3>
+      <form id="admin-product-form" class="cod-form">
+        <div class="field-group">
+          <label>Product Name</label>
+          <input type="text" id="admin-name" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>Price</label>
+            <input type="number" id="admin-price" required>
+          </div>
+          <div class="field-group">
+            <label>Category</label>
+            <select id="admin-category" required>
+              <option value="" disabled selected>Select Category</option>
+              <option value="tops">Tops</option>
+              <option value="bottoms">Bottoms</option>
+              <option value="shoes">Shoes</option>
+              <option value="outerwear">Outerwear</option>
+              <option value="bags">Bags</option>
+              <option value="accessories">Accessories</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>Color</label>
+            <input type="text" id="admin-color" required>
+          </div>
+          <div class="field-group">
+            <label>Season</label>
+            <input type="text" id="admin-season" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Image URL</label>
+          <input type="text" id="admin-image" required>
+        </div>
+
+        <div class="field-group">
+          <label>Description</label>
+          <input type="text" id="admin-description" required>
+        </div>
+
+        <button type="submit" class="pay-confirm-btn">Add Product</button>
+      </form>
+    </div>
+
+    <div class="admin-section">
+      <h3>All Orders</h3>
+      <div id="admin-orders-list" class="orders-list"></div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ===== Header ===== -->
+<header class="header" id="main-header" style="display:none">
+  <div class="wrap header-inner">
+    <a href="#" class="logo">
+      <span class="logo-sym">◈</span>
+      <span class="logo-word">SHOPPING WEB</span>
+      <span class="logo-tag">Make your shopping easier</span>
+    </a>
+    <div class="header-right">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input type="search" id="search" class="search-input" placeholder="Search products…" autocomplete="off">
+      </div>
+      <div class="currency-wrap">
+        <select id="currency-select" class="currency-select" title="Change currency">
+          <option value="USD">$ USD</option>
+          <option value="INR">₹ INR</option>
+          <option value="EUR">€ EUR</option>
+          <option value="GBP">£ GBP</option>
+          <option value="AED">د.إ AED</option>
+          <option value="JPY">¥ JPY</option>
+          <option value="CAD">C$ CAD</option>
+          <option value="AUD">A$ AUD</option>
+        </select>
+      </div>
+        
+  <button class="theme-btn" id="orders-btn" type="button" title="My Orders">📦</button>
+  <button class="theme-btn hidden" id="admin-btn" type="button" title="Admin Panel">🛠</button>
+      <button class="theme-btn" id="theme-toggle" type="button" title="Toggle theme">
+        <span id="theme-icon">☽</span>
+      </button>
+      <div class="user-avatar" id="user-avatar">
+        <span id="user-initial">U</span>
+      </div>
+      <button class="logout-btn" id="logout-btn" title="Logout">⏻</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Filters ===== -->
+<section class="filters" id="main-filters" style="display:none">
+  <div class="wrap">
+    <div class="fg">
+      <span class="fg-label">Category</span>
+      <div class="pills" id="f-category">
+        <button class="pill active" data-v="all">All</button>
+        <button class="pill" data-v="tops">👔 Tops</button>
+        <button class="pill" data-v="bottoms">👖 Bottoms</button>
+        <button class="pill" data-v="shoes">👟 Shoes</button>
+        <button class="pill" data-v="outerwear">🧥 Outerwear</button>
+        <button class="pill" data-v="bags">👜 Bags</button>
+        <button class="pill" data-v="accessories">💎 Accessories</button>
+      </div>
+    </div>
+    <div class="fg-row">
+      <div class="fg">
+        <span class="fg-label">Color</span>
+        <div class="pills" id="f-color">
+          <button class="pill active" data-v="all">All</button>
+          <button class="pill" data-v="black"><span class="dot" style="background:#222"></span>Black</button>
+          <button class="pill" data-v="white"><span class="dot" style="background:#eee;border:1px solid #999"></span>White</button>
+          <button class="pill" data-v="blue"><span class="dot" style="background:#3b82f6"></span>Blue</button>
+          <button class="pill" data-v="green"><span class="dot" style="background:#22c55e"></span>Green</button>
+          <button class="pill" data-v="brown"><span class="dot" style="background:#92400e"></span>Brown</button>
+          <button class="pill" data-v="beige"><span class="dot" style="background:#d4b896"></span>Beige</button>
+          <button class="pill" data-v="red"><span class="dot" style="background:#ef4444"></span>Red</button>
+        </div>
+      </div>
+      <div class="fg">
+        <span class="fg-label">Season</span>
+        <div class="pills" id="f-season">
+          <button class="pill active" data-v="all">All</button>
+          <button class="pill" data-v="spring">🌸 Spring</button>
+          <button class="pill" data-v="summer">☀️ Summer</button>
+          <button class="pill" data-v="fall">🍂 Fall</button>
+          <button class="pill" data-v="winter">❄️ Winter</button>
+          <button class="pill" data-v="all-season">🔄 All-Season</button>
+        </div>
+      </div>
+    </div>
+    <div class="fg-row fg-bottom">
+      <div class="fg fg-price">
+        <span class="fg-label">Max Price: <strong id="price-val">$36</strong></span>
+        <input type="range" id="price-range" min="12" max="36" value="36" step="1">
+      </div>
+      <div class="filter-status">
+        <span id="results-count" class="results-count">24 products</span>
+        <button id="clear-filters" class="clear-btn" type="button">✕ Clear Filters</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Main Content ===== -->
+<main class="main" id="main-content" style="display:none">
+  <div class="wrap main-grid">
+    <section class="catalog">
+      <div class="product-grid" id="product-grid"></div>
+      <div class="no-results" id="no-results" hidden>
+        <span class="nr-icon">∅</span>
+        <h3>No products match your filters</h3>
+        <p>Try adjusting or clearing your filters</p>
+      </div>
+    </section>
+
+    <aside class="builder" id="builder">
+      <div class="builder-head">
+        <h2><span>✦</span> Your Look</h2>
+        <button class="clear-bundle" id="clear-bundle" type="button" hidden>Clear All</button>
+      </div>
+      <div class="drop-zone" id="drop-zone">
+        <div class="drop-ph" id="drop-ph">
+          <div class="drop-ring"><span>+</span></div>
+          <p>Drag &amp; drop items here</p>
+          <small>or click <strong>+</strong> on any product card</small>
+        </div>
+        <div class="bundle-list" id="bundle-list"></div>
+      </div>
+      <div class="summary" id="summary">
+        <div class="ship-bar">
+          <span id="ship-msg" class="ship-msg">Add items to start building!</span>
+          <div class="ship-track">
+            <div class="ship-fill" id="ship-fill"></div>
+          </div>
+        </div>
+        <div class="sum-rows">
+          <div class="sum-row"><span>Items</span><span id="s-count">0</span></div>
+          <div class="sum-row"><span>Subtotal</span><span id="s-sub">$0</span></div>
+          <div class="sum-row"><span>Shipping</span><span id="s-ship">—</span></div>
+          <div class="sum-row sum-total"><span>Total</span><span id="s-total">$0</span></div>
+        </div>
+        <button class="cta-btn" id="cta-btn" type="button" disabled>
+          Build Your Look First
+        </button>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
